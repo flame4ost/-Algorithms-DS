@@ -61,7 +61,7 @@ void recursiveViewBranchs(Branch* root)
     }
 
     if(l != r)
-    std::cout << "В " << root->value << " ветке разное кол-во веток[" << l << ',' << r << "];" << std::endl;
+    std::cout << "Р’ " << root->value << " РІРµС‚РєРµ СЂР°Р·РЅРѕРµ РєРѕР»-РІРѕ РІРµС‚РѕРє[" << l << ',' << r << "];" << std::endl;
 }
 
 int main()
