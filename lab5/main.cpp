@@ -52,7 +52,7 @@ void vuvod() {
     void vuvod_res() {
         int i;
         if (goroda[B] == 0)
-            cout << "Íåìàº âèõîäó" << endl;
+            cout << "ÐÐµÐ¼Ð°Ñ” Ð²Ð¸Ñ…Ð¾Ð´Ñƒ" << endl;
         Q[0] = B; i_end = 2; t = goroda[B];
         while (t != A) {
             Q[i_end] = t; i_end++; t = goroda[t];
@@ -66,26 +66,26 @@ int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    cout << "Ââåä³òü ê³ëüê³ñòü âåðøèí ãðàôà: " << endl;
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ Ð²ÐµÑ€ÑˆÐ¸Ð½ Ð³Ñ€Ð°Ñ„Ð°: " << endl;
         cin >> n;
-    cout << "Ââåä³òü ê³ëüê³ñòü íåïðîõ³äíèõ âåðøèí: " << endl;
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ Ð½ÐµÐ¿Ñ€Ð¾Ñ…Ñ–Ð´Ð½Ð¸Ñ… Ð²ÐµÑ€ÑˆÐ¸Ð½: " << endl;
     cin >> m;
 
-    cout << "Ââåä³òü âåðøèíè: " << endl;
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð²ÐµÑ€ÑˆÐ¸Ð½Ð¸: " << endl;
     for (int i = 0; i < m; i++) {
         cin >> t; goroda[t] = -1;
     }
     matr_smezh();
-    cout << "Ìàòðèöÿ ñóì³æíîñò³: " << endl;
+    cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ñ ÑÑƒÐ¼Ñ–Ð¶Ð½Ð¾ÑÑ‚Ñ–: " << endl;
     vuvod();
     cout << endl;
     for (int i = 0; i < n; i++)
         if (goroda[i] == -1)
             cout << i << ' ';
     cout << endl;
-    cout << "Ââåä³òü íîìåð âåðøèíè À: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€ Ð²ÐµÑ€ÑˆÐ¸Ð½Ð¸ Ð: ";
     cin >> A;
-    cout << "Ââåä³òü íîìåð âåðøèíè Â: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€ Ð²ÐµÑ€ÑˆÐ¸Ð½Ð¸ Ð’: ";
     cin >> B;
     poisk();
     cout << endl;
