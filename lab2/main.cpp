@@ -9,15 +9,15 @@
 using namespace std;
 struct Discipline
 {
-    char code_discipl[50]; //Код дисциплины
-    char name_discipl[50];  // Нзавание дисциплины
-    char teacher_surname[50]; // Фамилия преподавателя
-    char code_group[50]; //код группы
-    char number_group_s[50]; //количество студентов в группе
-    int  lecture_hour[50]; // количество часов лекций
-    int numb_hour_exe[50]; //количество часовпрактических занятий
-    char test_or_exam[50]; //вид итогового контроля (зачет или экзамен)
-    int clas_start_date[50]; //дата начала занятий
+    char code_discipl[50]; //РљРѕРґ РґРёСЃС†РёРїР»РёРЅС‹
+    char name_discipl[50];  // РќР°Р·РІР°РЅРёРµ РґРёСЃС†РёРїР»РёРЅС‹
+    char teacher_surname[50]; // Р¤Р°РјРёР»РёСЏ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ
+    char code_group[50]; //РєРѕРґ РіСЂСѓРїРїС‹
+    char number_group_s[50]; //РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ РІ РіСЂСѓРїРїРµ
+    int  lecture_hour[50]; // РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ Р»РµРєС†РёР№
+    int numb_hour_exe[50]; //РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ РїСЂР°РєС‚РёС‡РµСЃРєРёС… Р·Р°РЅСЏС‚РёР№
+    char test_or_exam[50]; //РІРёРґ РёС‚РѕРіРѕРІРѕРіРѕ РєРѕРЅС‚СЂРѕР»СЏ (Р·Р°С‡РµС‚ РёР»Рё СЌРєР·Р°РјРµРЅ)
+    int clas_start_date[50]; //РґР°С‚Р° РЅР°С‡Р°Р»Р° Р·Р°РЅСЏС‚РёР№
 };
 int main()
 {
@@ -28,21 +28,21 @@ int main()
     Discipline *ds = new Discipline[n];
     for (int i = 0; i < n; i++)
     {
-        cout << "Введіть назву дисципліни: ";
+        cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РґРёСЃС†РёРїР»РёРЅС‹: ";
         cin >> ds[i].name_discipl;
-        cout << "Введіть прізвище викладача: ";
+        cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ: ";
         cin >> ds[i].teacher_surname;
-        cout << "Введіть код групи: ";
+        cout << "Р’РІРµРґРёС‚Рµ РєРѕРґ РіСЂСѓРїРїС‹: ";
         cin >> ds[i].code_group;
-        cout << "Введіть кількість студентів в групі: ";
+        cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ РІ РіСЂСѓРїРїРµ: ";
         cin >> ds[i].number_group_s;
-        cout << "Введіть кількість годин лекцій: ";
+        cout << "Р’РІРµРґРёС‚Рµ РєРѕР»Р»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ Р»РµРєС†РёР№: ";
         cin >> ds[i].lecture_hour[i];
-        cout << "Введіть кількість годин практичних занять: ";
+        cout << "Р’РІРµРґРёС‚Рµ РєРѕР»Р»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ РїСЂР°РєС‚РёС‡РµСЃРєРёС… Р·Р°РЅСЏС‚РёР№: ";
         cin >> ds[i].numb_hour_exe[i];
-        cout << "Введіть залік або іспит: ";
+        cout << "Р’РІРµРґРёС‚Рµ Р·Р°С‡С‘С‚ РёР»Рё СЌРєР·Р°РјРµРЅ: ";
         cin >> ds[i].test_or_exam;
-        cout << "Введіть дату початку занять: ";
+        cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ РЅР°С‡Р°Р»Р° Р·Р°РЅСЏС‚РёР№: ";
         cin >> ds[i].clas_start_date[i];
         cout << endl << endl;
     }
@@ -58,19 +58,19 @@ int main()
 
     char teacherSurname[30];
     cout << "Search in list" << endl;
-    cout << "Введіть прізвище викладача: "  << endl;
+    cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ: "  << endl;
     cin >> teacherSurname;
     for (int i = 0; i < n; i++)
     {
         if (strcmp(teacherSurname,ds[i].teacher_surname)==0)
         {
-            cout << "Назва дисципліни: "<< ds[i].name_discipl<<endl;
-            cout << "Код групи: "<< ds[i].code_group<<endl;
-            cout << "Кількість студентів в групі: "<< ds[i].number_group_s<<endl;
-            cout << "Кількість годин (лекцій): "<< ds[i].lecture_hour[i]<<endl;
-            cout << "Кількість годин практичних занять: "<< ds[i].numb_hour_exe[i]<<endl;
-            cout << "Залік або іспит: "<< ds[i].test_or_exam<<endl;
-            cout << "Дата початку занять: "<< ds[i].clas_start_date[i]<<endl;
+            cout << "РќР°Р·РІР°РЅРёРµ РґРёСЃС†РёРїР»РёРЅС‹: "<< ds[i].name_discipl<<endl;
+            cout << "РљРѕРґ РіСЂСѓРїРїС‹: "<< ds[i].code_group<<endl;
+            cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ РІ РіСЂСѓРїРїРµ: "<< ds[i].number_group_s<<endl;
+            cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ (Р»РµРєС†РёР№): "<< ds[i].lecture_hour[i]<<endl;
+            cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ РїСЂР°РєС‚РёС‡РµСЃРєРёС… Р·Р°РЅСЏС‚РёР№: "<< ds[i].numb_hour_exe[i]<<endl;
+            cout << "Р—Р°С‡С‘С‚ РёР»Рё СЌРєР·Р°РјРµРЅ: "<< ds[i].test_or_exam<<endl;
+            cout << "Р”Р°С‚Р° РЅР°С‡Р°Р»Р° Р·Р°РЅСЏС‚РёР№: "<< ds[i].clas_start_date[i]<<endl;
 
         }
         else
@@ -98,13 +98,13 @@ int main()
     }
     for (int i = 0; i < n; i++)
     {
-        cout << "Назва дисципліни: " << ds[i].name_discipl << endl;
-        cout << "Код групи: " << ds[i].code_group << endl;
-        cout << "Кількість студентів в групі: " << ds[i].number_group_s << endl;
-        cout << "Кількість годин (лекцій): " << ds[i].lecture_hour[i] << endl;
-        cout << "Кількість годин практичних занять: " << ds[i].numb_hour_exe[i] << endl;
-        cout << "Залік або іспит: " << ds[i].test_or_exam << endl;
-        cout << "Дата початку занять: " << ds[i].clas_start_date[i] << endl;
+        cout << "РќР°Р·РІР°РЅРёРµ РґРёСЃС†РёРїР»РёРЅС‹: " << ds[i].name_discipl << endl;
+        cout << "РљРѕРґ РіСЂСѓРїРїС‹: " << ds[i].code_group << endl;
+        cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ РІ РіСЂСѓРїРїРµ: " << ds[i].number_group_s << endl;
+        cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ Р»РµРєС†РёР№: " << ds[i].lecture_hour[i] << endl;
+        cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ РїСЂР°РєС‚РёС‡РµСЃРєРёС… Р·Р°РЅСЏС‚РёР№: " << ds[i].numb_hour_exe[i] << endl;
+        cout << "Р—Р°С‡С‘С‚ РёР»Рё СЌРєР·Р°РјРµРЅ: " << ds[i].test_or_exam << endl;
+        cout << "Р”Р°С‚Р° РЅР°С‡Р°Р»Р° Р·Р°РЅСЏС‚РёР№: " << ds[i].clas_start_date[i] << endl;
     }
     system("pause");
     return 0;
